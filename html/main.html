@@ -1,0 +1,46 @@
+<div class="box">
+    <h1>Welcome to the Cloud Code Repository!</h1>
+    <p>As a custom web developer, I have designed my own libraries and tools to help me create websites more efficiently and with less repetitive code.
+        The libraries I've developed are lightweight and don't slow your page speed down like massive libraries such as bootstrap and jquery-ui.</p>
+</div>
+<?php foreach ($this->codes as $code) {?>
+<div class="box">
+    <h1>Project: <?=$code->code_name;?></h1>
+    <div class="code-header">
+        <div>
+            <i class="fas fa-code" title="GitHub Page"></i>
+            <a href="https://github.com/cloudmedia/<?=$code->code_url;?>" target="_blank">GitHub Page</a>
+        </div>
+        <div>
+            <i class="fas fa-desktop" title="Project Page"></i>
+            <a href="/project/<?=$code->code_id;?>/<?=$code->code_url;?>">Project Page</a>
+        </div>
+    </div>
+    <?=$code->code_desc;?>
+</div>
+<style>
+.code-header
+{
+    display: flex;
+}
+.code-header > div
+{
+    font-size: 1.5em;
+    color: rgb(74, 74, 156);
+    cursor: pointer;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+.code-header > div:hover
+{
+    opacity: 0.5;
+}
+.code-header > div:not(:last-of-type)
+{
+    margin-right: 0.5em;
+}
+</style>
+<?php }?>

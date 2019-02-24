@@ -19,7 +19,7 @@
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
             crossorigin="anonymous">
         <link rel="icon" href="/images/cloud-code-icon.png" />
-        <link rel="stylesheet" href="css/site.css" />
+        <link rel="stylesheet" href="/css-main/static.css" />
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
@@ -65,9 +65,13 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-        <script src="lib/js/anime.min.js"></script>
-        <script src="lib/js/sounds.js"></script>
-        <script src="lib/js/notify2.js"></script>
-        <script src="js/site.js"></script>
+        <script src="/js/anime.min.js"></script>
+        <script src="/js/notify.js"></script>
+        <script src="/js/base64.js"></script>
+        <script src="/js/site.js"></script>
+        <?php js_files(); ?>
+        <?php global $pjs_files; foreach ($pjs_files as $file) {?>
+        <script src="/pjs/<?=$file;?>"></script>
+        <?php }?>
     </body>
 </html>

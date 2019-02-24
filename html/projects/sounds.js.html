@@ -1,0 +1,66 @@
+<div class="box">
+    <h1>Project: <?=$this->code->code_name;?></h1>
+    <div>
+        <i class="fas fa-code" title="GitHub Page"></i>
+        <a href="https://github.com/cloudmedia/<?=$this->code->code_url;?>" target="_blank">GitHub Page</a>
+    </div>
+    <?=$this->code->code_desc;?>
+</div>
+<div class="box">
+    <h2>Sounds.js Code:</h2>
+    <div class="code"><pre><code contenteditable="true">
+// Sounds
+var sndSilence = document.createElement('audio');
+sndSilence.setAttribute('src', '/sounds/silence.mp3');
+var sndIntro = document.createElement('audio');
+sndIntro.setAttribute('src', '/sounds/intro.wav');
+var sndType = document.createElement('audio');
+sndType.setAttribute('src', '/sounds/type.wav');
+var sndAlert1 = document.createElement('audio');
+sndAlert1.setAttribute('src', '/sounds/alert1.wav');
+var sndAlert2 = document.createElement('audio');
+sndAlert2.setAttribute('src', '/sounds/alert2.wav');
+var sndAlert3 = document.createElement('audio');
+sndAlert3.setAttribute('src', '/sounds/alert3.wav');
+var sndDing = document.createElement('audio');
+sndDing.setAttribute('src', '/sounds/ding.wav');
+var sndButton = document.createElement('audio');
+sndButton.setAttribute('src', '/sounds/button.wav');
+var sndMessage = document.createElement('audio');
+sndMessage.setAttribute('src', '/sounds/message.wav');
+var sndError = document.createElement('audio');
+sndError.setAttribute('src', '/sounds/error.wav');
+var sndSuccess = document.createElement('audio');
+sndSuccess.setAttribute('src', '/sounds/success.wav');
+var sndSlide = document.createElement('audio');
+sndSlide.setAttribute('src', '/sounds/slide.wav');
+var sndAHAHAH = document.createElement('audio');
+sndAHAHAH.setAttribute('src', '/sounds/nedry.wav');
+
+function playSound(snd)
+{
+    $('audio').each(function(){
+    this.pause();
+    this.currentTime = 0;
+    });
+    sndSilence.play();
+    setTimeout(function(){
+    snd.play();
+    },100);
+}
+    </code></pre></div>
+</div>
+<div class="box">
+    <h2>Example:</h2>
+    <div class="code"><pre><code>
+playSound(sndAHAHAH);
+    </code></pre></div>
+    <button id="sound-ahahah-btn" class="button primary">Try It!</button>
+</div>
+<div class="box">
+    <h2>Example 2:</h2>
+    <div class="code"><pre><code>
+playSound(sndIntro);
+    </code></pre></div>
+    <button id="sound-intro-btn" class="button primary">Try It!</button>
+</div>

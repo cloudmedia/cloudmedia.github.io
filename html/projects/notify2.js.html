@@ -1,0 +1,81 @@
+<div class="box">
+    <h1>Project: <?=$this->code->code_name;?></h1>
+    <div>
+        <i class="fas fa-code" title="GitHub Page"></i>
+        <a href="https://github.com/cloudmedia/<?=$this->code->code_url;?>" target="_blank">GitHub Page</a>
+    </div>
+    <?=$this->code->code_desc;?>
+</div>
+<div class="box">
+    <h2>ERROR Class Example</h2>
+    <div class="code">
+        <pre><code>
+var notify = new Notify2("Some error has occurred!", "error");
+notify.notify();
+        </code></pre>
+    </div>
+    <button id="notify-example-one" class="button primary">Try It!</button>
+</div>
+<div class="box">
+    <h2>SUCCESS Class Example</h2>
+    <div class="code">
+        <pre><code>
+var notify = new Notify2("The operation was a success!", "success");
+notify.notify();
+        </code></pre>
+    </div>
+    <button id="notify-example-success" class="button primary">Try It!</button>
+</div>
+<div class="box">
+    <h2>WARN Class Example</h2>
+    <div class="code">
+        <pre><code>
+var notify = new Notify2("This could be dangerous, but no error has yet occurred!", "warn");
+notify.notify();
+        </code></pre>
+    </div>
+    <button id="notify-example-warn" class="button primary">Try It!</button>
+</div>
+<div class="box">
+    <h2>INFO Class Example</h2>
+    <div class="code">
+        <pre><code>
+var notify = new Notify2("Here is some important information!", "info");
+notify.notify();
+        </code></pre>
+    </div>
+    <button id="notify-example-info" class="button primary">Try It!</button>
+</div>
+<div class="box">
+    <h2>INFO Class With Confirmation Example</h2>
+    <div class="code">
+        <pre><code>
+var notify = new Notify2("Are you sure you want to do this?!", "info");
+notify.doConfirm("confirmYes()", "confirmNo()");
+notify.notify();
+
+function confirmYes()
+{
+    notify = new Notify2("You chose yes!", "success");
+    notify.notify();
+}
+function confirmNo()
+{
+    notify = new Notify2("You chose no! OH NO!!!", "warn");
+    notify.notify();
+}
+        </code></pre>
+    </div>
+    <button id="notify-example-confirm" class="button primary">Try It!</button>
+</div>
+<div class="box">
+    <h2>INFO Class With Auto-Hide Turned Off</h2>
+    <div class="code">
+        <pre><code>
+var notify = new Notify2("I want you to see this until you click something... anything!", "info");
+notify.setAutoHide(false);
+notify.notify();
+        </code></pre>
+    </div>
+    <button id="notify-example-autohide" class="button primary">Try It!</button>
+</div>

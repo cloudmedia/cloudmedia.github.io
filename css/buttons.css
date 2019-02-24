@@ -1,0 +1,310 @@
+ul.actions {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: default;
+    list-style: none;
+    margin-left: -1em;
+    padding-left: 0;
+}
+
+    ul.actions li {
+        padding: 0 0 0 1em;
+        vertical-align: middle;
+    }
+    @media (max-width: 500px)
+    {
+        ul.actions li:not(:last-of-type) {
+            margin-bottom: 1em;
+        }
+    }
+
+    ul.actions.special {
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+        ul.actions.special li:first-child {
+            padding-left: 0;
+        }
+
+    ul.actions.stacked {
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+        ul.actions.stacked li {
+            padding: 1.3em 0 0 0;
+        }
+
+            ul.actions.stacked li:first-child {
+                padding-top: 0;
+            }
+
+    ul.actions.fit {
+        width: calc(100% + 1em);
+    }
+
+        ul.actions.fit li {
+            -moz-flex-grow: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-grow: 1;
+            flex-grow: 1;
+            -moz-flex-shrink: 1;
+            -webkit-flex-shrink: 1;
+            -ms-flex-shrink: 1;
+            flex-shrink: 1;
+            width: 100%;
+        }
+
+            ul.actions.fit li > * {
+                width: 100%;
+            }
+
+        ul.actions.fit.stacked {
+            width: 100%;
+        }
+/* Button */
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: rgba(0, 174, 255, 0.19);
+    border-radius: 0.375em;
+    border: 0;
+    box-shadow: inset 0 0 0 2px #00aeff;
+    color: #00aeff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    height: 3.5em;
+    letter-spacing: 0.075em;
+    line-height: 3.5em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+    .button:hover {
+        background-color: rgba(0, 174, 255, 0.452);
+    }
+
+    .button:active {
+        background-color: rgba(0, 174, 255, 0.63);
+    }
+
+    .button.icon:before {
+        margin-right: 0.5em;
+    }
+
+    .button.fit {
+        width: 100%;
+    }
+
+    .button.small {
+        font-size: 0.6em;
+    }
+
+    .button.large {
+        font-size: 1em;
+        height: 3.65em;
+        line-height: 3.65em;
+    }
+
+    .button.primary {
+        background-color: #4b4b85;
+        box-shadow: none;
+        color: #ffffff !important;
+    }
+
+        .button.primary:hover {
+            background-color: #9a9ad8;
+        }
+
+        .button.primary:active {
+            background-color: #1e1e64;
+        }
+
+    .button.disabled,
+    .button:disabled {
+        pointer-events: none;
+        opacity: 0.25;
+    }
+
+.headBtns
+{
+    margin-bottom: 1em;
+    display: flex;
+}
+.headBtns > i
+{
+    font-size: 2em;
+    flex-basis: 5%;
+    color: #00aeff;
+    cursor: pointer;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+@media (max-width: 500px)
+{
+    .headBtns > i
+    {
+        flex-basis: 15%;
+    }
+}
+.headBtns > i:hover
+{
+    color: #04618b;
+}
+
+i.disabled
+{
+    opacity: 0.2 !important;
+    cursor: default !important;
+}
+
+.iconBtn
+{
+    font-size: 1.5em;
+    color: #00aeff;
+    cursor: pointer;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    margin-right: 0.5em;
+}
+.iconBtn:hover
+{
+    color: #04618b;
+}
+
+.inlineBtn
+{
+    cursor: pointer;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    display: inline;
+    color: rgb(69, 104, 179);
+}
+.inlineBtn.spaced
+{
+    margin-left: 10px;
+}
+.inlineBtn.medium
+{
+    font-size: 2em;
+}
+.inlineBtn.big
+{
+    font-size: 3em;
+}
+.inlineBtn:hover
+{
+    opacity: 0.5;
+}
+
+.big-button
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  padding: 1em;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+.big-button > i
+{
+  font-size: 4em;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+.big-button > svg
+{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  width: 4em;
+  height: 4em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+.big-button > svg path
+{
+    fill: white;
+}
+.big-button > span
+{
+  font-size: 2em;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  margin-bottom: 0.2em;
+}
+.big-button > span.bbb
+{
+  position: absolute;
+  left: 0.5em;
+  top: -0.5em;
+  background-color: rgba(255,255,255,0.3);
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+.big-button > span.bbb:hover
+{
+  background-color: rgba(255, 0, 0, 0.438);
+}
+.big-button.small-text > span
+{
+  font-size: 1.2em !important;
+  margin-top: 1em;
+}
+.big-button:hover
+{
+    opacity: 0.5;
+}
